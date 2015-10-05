@@ -1,0 +1,75 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'react--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json react@1.0.0 No description
+6 warn package.json react@1.0.0 No repository field.
+7 warn package.json react@1.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'react--save-dev', null ]
+10 verbose cache add name=undefined spec="react--save-dev" args=["react--save-dev",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'react--save-dev',
+11 verbose parsed url   path: 'react--save-dev',
+11 verbose parsed url   href: 'react--save-dev' }
+12 silly lockFile daa1188f-react-save-dev react--save-dev
+13 verbose lock react--save-dev C:\Users\hysios\AppData\Roaming\npm-cache\daa1188f-react-save-dev.lock
+14 silly lockFile daa1188f-react-save-dev react--save-dev
+15 silly lockFile daa1188f-react-save-dev react--save-dev
+16 verbose addNamed [ 'react--save-dev', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile a076fcf9-react-save-dev react--save-dev@
+19 verbose lock react--save-dev@ C:\Users\hysios\AppData\Roaming\npm-cache\a076fcf9-react-save-dev.lock
+20 silly addNameRange { name: 'react--save-dev', range: '*', hasData: false }
+21 verbose request where is /react--save-dev
+22 verbose request registry https://registry.npmjs.org/
+23 verbose request id 94a36581e8e01a75
+24 verbose url raw /react--save-dev
+25 verbose url resolving [ 'https://registry.npmjs.org/', './react--save-dev' ]
+26 verbose url resolved https://registry.npmjs.org/react--save-dev
+27 verbose request where is https://registry.npmjs.org/react--save-dev
+28 info trying registry request attempt 1 at 22:59:09
+29 http GET https://registry.npmjs.org/react--save-dev
+30 http 404 https://registry.npmjs.org/react--save-dev
+31 silly registry.get cb [ 404,
+31 silly registry.get   { 'content-type': 'application/json',
+31 silly registry.get     'cache-control': 'max-age=0',
+31 silly registry.get     'content-length': '2',
+31 silly registry.get     'accept-ranges': 'bytes',
+31 silly registry.get     date: 'Mon, 05 Oct 2015 14:58:09 GMT',
+31 silly registry.get     via: '1.1 varnish',
+31 silly registry.get     age: '0',
+31 silly registry.get     connection: 'keep-alive',
+31 silly registry.get     'x-served-by': 'cache-itm7426-ITM',
+31 silly registry.get     'x-cache': 'MISS',
+31 silly registry.get     'x-cache-hits': '0',
+31 silly registry.get     'x-timer': 'S1444057088.674743,VS0,VE545' } ]
+32 silly lockFile a076fcf9-react-save-dev react--save-dev@
+33 silly lockFile a076fcf9-react-save-dev react--save-dev@
+34 error 404 Not Found
+34 error 404
+34 error 404 'react--save-dev' is not in the npm registry.
+34 error 404 You should bug the author to publish it
+34 error 404 It was specified as a dependency of 'react'
+34 error 404
+34 error 404 Note that you can also install from a
+34 error 404 tarball, folder, or http url, or git url.
+35 error System Windows_NT 6.1.7601
+36 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "react--save-dev"
+37 error cwd C:\Users\hysios\Documents\chess\web\react
+38 error node -v v0.10.33
+39 error npm -v 1.4.28
+40 error code E404
+41 verbose exit [ 1, true ]
