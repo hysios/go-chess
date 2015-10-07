@@ -1,0 +1,74 @@
+.chessboard {
+	background-image: url(/images/chessboard.jpg);
+	background-size: 100%;
+	width: 700px;
+	height: 786px;
+}
+
+.chess {
+	width: 73px;
+	height: 73px;
+	margin-top: -36.5px;
+	margin-left: -36.5px;
+	background-image: url(/images/chess.png);
+	position: absolute;
+}
+
+/* space 76px */
+
+.chess-king {
+	background-position: 0 73px;
+}
+
+.chess-guardian {
+	background-position: -73px 73px;
+}
+
+.chess-minister {
+	background-position: -292px 73px;
+}
+
+.chess-horse {
+	background-position: -219px 73px;
+}
+
+.chess-vehicle {
+	background-position: -365px 73px;
+}
+
+.chess-connon {
+	background-position: -146px 73px;
+}
+
+.chess-solider {
+	background-position: -438px 73px;
+}
+
+.chess-king.chess-camp-shuai {
+	background-position: 0 0px;
+}
+
+.chess-guardian.chess-camp-shuai {
+	background-position: -73px 0px;
+}
+
+.chess-minister.chess-camp-shuai {
+	background-position: -292px 0px;
+}
+
+.chess-horse.chess-camp-shuai {
+	background-position: -219px 0px;
+}
+
+.chess-vehicle.chess-camp-shuai {
+	background-position: -365px 0px;
+}
+
+.chess-connon.chess-camp-shuai {
+	background-position: -146px 0px;
+}
+
+.chess-solider.chess-camp-shuai {
+	background-position: -438px 0px;
+}
+
