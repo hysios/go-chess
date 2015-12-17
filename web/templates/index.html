@@ -61,16 +61,18 @@
 </nav>
 <div class="container">
 	<div class="row">
-		<div class="chessboard col-sm-8" >
-			{{range $row, $value := .}}
-				{{ range $col, $item := $value }}
-					{{with $item}}
-						<div class="chess chess-{{(.TypeString)}} {{if (eq .Camp 0)}}chess-camp-shuai{{end}}" style="top: {{calcy $row}}px; left: {{calcx $col}}px"></div>
+		<div class="col-sm-8">
+			<div class="chessboard" >
+				{{range $row, $value := .}}
+					{{ range $col, $item := $value }}
+						{{with $item}}
+							<div class="chess chess-{{(.TypeString)}} {{if (eq .Camp 0)}}chess-camp-shuai{{end}}" style="top: {{calcy $row}}px; left: {{calcx $col}}px"></div>
+						{{end}}
 					{{end}}
 				{{end}}
-			{{end}}
+			</div>
 		</div>
 	</div>
 </div>
-</body>	
+</body>
 </html>

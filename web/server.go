@@ -1,18 +1,20 @@
 package web
 
 import (
-	"../game"
-	"../utils"
 	"fmt"
 	"html/template"
 	"log"
 	"net/http"
 	"path/filepath"
+
+	"github.com/hysios/go-chess/game"
+	"github.com/hysios/go-chess/utils"
 )
 
 var ts *template.Template
 var staticHandler http.Handler
 var tpls map[string]*template.Template
+
 var funcMap = template.FuncMap{
 	// The name "title" is what the function will be called in the template text.
 	"calcy": calcY,
@@ -63,7 +65,7 @@ func TemplatePath(filename string) string {
 
 const (
 	startTop  = 47
-	startLeft = 43
+	startLeft = 43 + 15
 	cellSize  = 77
 )
 
