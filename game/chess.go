@@ -5,6 +5,7 @@ import (
 )
 
 type ChessType int
+
 type CampType int
 
 const (
@@ -30,8 +31,9 @@ type Camp struct {
 }
 
 type Chess struct {
-	x, y int
-	camp Camp
+	x, y      int
+	chessType ChessType
+	camp      Camp
 }
 
 type Chesser interface {
@@ -160,6 +162,11 @@ func NewVehicle(x, y int) *Vehicle {
 	}
 }
 
+/**
+ * [func description]
+ * @param  {[type]} c *Chess        [description]
+ * @return {[type]}   [description]
+ */
 func (c *Chess) GetXY() (x, y int) {
 	return c.x, c.y
 }

@@ -1,9 +1,8 @@
 package game
 
-import (
-	"fmt"
-	// "github.com/nsf/termbox-go"
-)
+import "log"
+
+// "github.com/nsf/termbox-go"
 
 const rows = 10
 const cols = 9
@@ -55,7 +54,8 @@ type Game struct {
 }
 
 func (g *Game) Start(players [2]*Play) {
-	fmt.Printf("staring...%v", g)
+	// fmt.Printf("staring...%v", g)
+	log.Printf("start gaming ...%v", g)
 
 	g.cb.Reset()
 }
