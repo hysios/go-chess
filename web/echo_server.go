@@ -28,10 +28,12 @@ func index(c *echo.Context) error {
 	p1 := game.NewPlay("player1")
 	p2 := game.NewPlay("player2")
 	players := [2]*game.Play{p1, p2}
-	var game game.Game
 
-	game.Start(players)
-	return c.Render(http.StatusOK, "index.html", game.GetGrids())
+	g, _ := game.New()
+	g.Start(players)
+	game.Push(g)
+	game.Save()
+	return c.Render(http.StatusOK, "index.html", g.GetGrids())
 }
 
 // EchoServer is echo version of http server

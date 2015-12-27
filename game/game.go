@@ -1,8 +1,6 @@
 package game
 
-import "log"
-
-// "github.com/nsf/termbox-go"
+import sr "github.com/tuvistavie/securerandom"
 
 const rows = 10
 const cols = 9
@@ -49,17 +47,51 @@ func (cb *Chessboard) Reset() {
 }
 
 type Game struct {
-	cb      Chessboard
+	Id      string
+	Cb      Chessboard
 	players *[2]Play
+}
+
+func New() (game *Game, err error) {
+	if key, err := sr.UrlSafeBase64(11, false); err == nil {
+		return &Game{Id: key}, nil
+	}
+
+	return nil, err
 }
 
 func (g *Game) Start(players [2]*Play) {
 	// fmt.Printf("staring...%v", g)
-	log.Printf("start gaming ...%v", g)
+	// log.Printf("start gaming ...%v", g)
 
-	g.cb.Reset()
+	g.Cb.Reset()
 }
 
+// func (g *Game) UnmarshalJSON(b []byte) error {
+//     var f interface{}
+//     json.Unmarshal(b, &f)
+//
+//     m := f.(map[string]interface{})
+//
+//     cbmap := m["cb"]
+//     v := cbmap.(map[string]interface{})
+//
+//     a.FooBar = v["bar"].(string)
+//     a.FooBaz = v["baz"].(string)
+//
+//     return nil
+// }
+//
+// func (g *Game) MarshalJSON() ([]byte, error) {
+// 		json.Marshal(g.cb)
+//     return []byte(`{"data":"charlie"}`), nil
+// }
+//
+// func (g *Game) UnmarshalJSON(b []byte) error {
+//     // Insert the string directly into the Data member
+//     return json.Unmarshal(b, &s.Data)
+// }
+
 func (g *Game) GetGrids() Grids {
-	return g.cb.grids
+	return g.Cb.grids
 }
